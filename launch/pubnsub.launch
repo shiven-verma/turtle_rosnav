@@ -1,0 +1,12 @@
+<launch>
+
+<node pkg="turtlesim" type="turtlesim_node" name="sim">
+<remap from="turtle1/cmd_vel" to="cmd_vel"/>
+</node>
+<node pkg="tryout" type="generate.py" name="generate" output="screen"/>
+<node pkg="turtlesim" type="turtle_teleop_key" name="teleop" output="screen"/>
+<node pkg="tryout" type="pubgoal.py" name="pubgoal" output="screen"/>
+<node pkg="tryout" type="subgoal.py" name="subgoal" output="screen"/>
+
+
+</launch>
